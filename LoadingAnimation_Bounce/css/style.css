@@ -1,0 +1,43 @@
+@font-face { /*好きなフォントを入れる。*/
+  font-family: "Install-your-favorite-font";
+  src: url("../font/kingthings-petrock/Kingthings\ Petrock\ light.ttf") format("truetype")
+}
+
+#Nowloading { /*Nowloading_Animationの位置やfont-family、フォントサイズなどのスタイル指定*/
+  position: absolute;
+  top: 88%;
+  right: 30px;
+  font-size: 45px;
+  font-family: "Install-your-favorite-font";
+  letter-spacing: 4px; /*文字間隔の調整*/
+}
+
+span { /*inline-blockを付与して上げないとspanタグはインライン要素なのでtransformが使えない*/
+  display: inline-block;
+}
+
+.bounce { /*文字が跳ねるアニメーションは1.8秒かけて行われる*/
+  animation: 1.8s ease-in-out bounce;
+}
+
+@keyframes bounce { /*跳ねるアニメーションの指定*/
+  0%{ transform: translateY(0px); opacity: 0.5;}
+  14%{ transform: translateY(-20px); opacity: 1;}
+  28%{ transform: translateY(-5px); opacity: 1;}
+  100%{ transform: translateY(-5px); opacity: 1;}
+}
+
+.reposition { /*跳ねた文字が元の位置に戻るまでのアニメーションは1.2秒かけて行われる*/
+  opacity: 0.5; /*animationが終了した時に透明度が1になってしまうことへの対策*/
+  animation: 1.2s ease-in-out reposition;
+}
+
+@keyframes reposition { /*再配置のアニメーションの指定*/
+  0%{ transform: translateY(-5px); opacity: 1;}
+  50%{ transform: translateY(0px); opacity: 0.5;}
+  100%{ transform: translateY(0px); opacity: 0.5;}
+}
+
+.def { /*Defaultスタイル*/
+  opacity: 0.5;
+}
