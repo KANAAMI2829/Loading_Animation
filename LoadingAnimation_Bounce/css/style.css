@@ -12,7 +12,7 @@
   letter-spacing: 4px; /*文字間隔の調整*/
 }
 
-span { /*inline-blockを付与して上げないとspanタグはインライン要素なのでtransformが使えない*/
+span { /*inline-blockを付与しないとspanタグはインライン要素なのでtransformが使えない*/
   display: inline-block;
 }
 
@@ -38,6 +38,6 @@ span { /*inline-blockを付与して上げないとspanタグはインライン�
   100%{ transform: translateY(0px); opacity: 0.5;}
 }
 
-.def { /*Defaultスタイル*/
+.def { /*Nowloading......のスタイル初期値*/
   opacity: 0.5;
 }

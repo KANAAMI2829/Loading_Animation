@@ -32,13 +32,13 @@ function Reposition_Nowloading() { // 再配置のCSSアニメーションを動
   }
 }
 
-function Nowloading_Animation() {
+function Nowloading_Animation() { // 総括した関数
   Bounce_Nowloading();
   setTimeout(() => {
     Reposition_Nowloading();
   }, 1800);
 
-  const Loading_Animation = setInterval(() => {
+  setInterval(() => {
     Bounce_Nowloading();
     setTimeout(() => {
       Reposition_Nowloading();
