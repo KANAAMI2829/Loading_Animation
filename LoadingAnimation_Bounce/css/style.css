@@ -9,14 +9,14 @@
   right: 30px;
   font-size: 45px;
   font-family: "Install-your-favorite-font";
-  letter-spacing: 4px; /*文字間隔の調整*/
+  letter-spacing: 4px;
 }
 
 span { /*inline-blockを付与しないとspanタグはインライン要素なのでtransformが使えない*/
   display: inline-block;
 }
 
-.bounce { /*文字が跳ねるアニメーションは1.8秒かけて行われる*/
+.bounce {
   animation: 1.8s ease-in-out bounce;
 }
 
@@ -27,7 +27,7 @@ span { /*inline-blockを付与しないとspanタグはインライン要素な�
   100%{ transform: translateY(-5px); opacity: 1;}
 }
 
-.reposition { /*跳ねた文字が元の位置に戻るまでのアニメーションは1.2秒かけて行われる*/
+.reposition {
   opacity: 0.5; /*animationが終了した時に透明度が1になってしまうことへの対策*/
   animation: 1.2s ease-in-out reposition;
 }
