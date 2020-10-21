@@ -10,7 +10,6 @@ function Bounce_Nowloading() { // 跳ねるCSSアニメーションを動かす�
     } else {
       obj.classList.remove('reposition');
     }
-    console.log(obj.classList);
     id_num++;
 
     if (id_num > 15) {
@@ -28,12 +27,20 @@ function Reposition_Nowloading() { // 再配置のCSSアニメーションを動
     let obj = document.getElementById(`${id_num}`);
     obj.classList.add('reposition');
     obj.classList.remove('bounce');
-    console.log(obj.classList);
   }
 }
 
-function Stop_Nowloading_Animation() {
+function Stop_Nowloading_Animation() { // アニメーションを停止させる処理
   clearInterval(StopId);
+  for (let id_num = 0; id_num < 16; id_num++) {
+    let obj = document.getElementById(`${id_num}`);
+    obj.classList.add('def');
+    if (obj.classList.contains('bounce')) {
+      obj.classList.remove('bounce');
+    } else if (obj.classList.contains('reposition')) {
+      obj.classList.remove('reposition');
+    }
+  }
 }
 
  // Nowloading_Animationを動かすための処理
