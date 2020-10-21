@@ -4,7 +4,7 @@ function Bounce_Nowloading() { // 跳ねるCSSアニメーションを動かす�
   let id_num = 0; 
   function replace_class_bounce() {
     let obj = document.getElementById(`${id_num}`);
-    obj.classList.add('bounce'); // classをbounceへ0.05秒に一回置換していく処理
+    obj.classList.add('bounce'); // classをbounceへ0.05秒ごとに一回置換していく処理
     if (obj.classList.contains('def')) {
       obj.classList.remove('def');
     } else {
