@@ -32,18 +32,19 @@ function Reposition_Nowloading() { // 再配置のCSSアニメーションを動
   }
 }
 
-function Nowloading_Animation() { // 総括した関数
+function Stop_Nowloading_Animation() {
+  clearInterval(StopId);
+}
+
+ // Nowloading_Animationを動かすための処理
+Bounce_Nowloading();
+setTimeout(() => {
+  Reposition_Nowloading();
+}, 1800);
+
+const StopId = setInterval(() => {
   Bounce_Nowloading();
   setTimeout(() => {
     Reposition_Nowloading();
   }, 1800);
-
-  setInterval(() => {
-    Bounce_Nowloading();
-    setTimeout(() => {
-      Reposition_Nowloading();
-    }, 1800);
-  }, 2700);
-}
-
-Nowloading_Animation();
+}, 2700);
