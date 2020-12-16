@@ -1,6 +1,9 @@
 @font-face { /*好きなフォントを入れる。*/
   font-family: "Install-your-favorite-font";
-  src: url("../font/kingthings-petrock/Kingthings\ Petrock\ light.ttf") format("truetype")
+  src:
+  url("../font/Kingthings-Petrock.woff2") format("woff2"),
+  url("../font/Kingthings-Petrock.woff") format("woff"),
+  url("../font/Kingthings-Petrock.ttf") format("truetype");
 }
 
 #Nowloading { /*Nowloading_Animationの位置やfont-family、フォントサイズなどのスタイル指定*/
