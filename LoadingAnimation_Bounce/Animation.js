@@ -24,8 +24,8 @@ function Bounce_Nowloading() { // 跳ねるCSSアニメーションを動かす�
   }, 50);
 }
 
-function Reposition_Nowloading() { // classをbounceからrepositionへ置換していく処理
-  for (let id_num = 0; id_num < ID_MAX + 1; id_num++) {
+function Reposition_Nowloading() { // 再配置のCSSアニメーションを動かす処理
+  for (let id_num = 0; id_num < ID_MAX + 1; id_num++) { // classをbounceからrepositionへ置換していく処理
     let obj = document.getElementById(`${id_num}`);
     obj.classList.add('reposition');
     obj.classList.remove('bounce');
@@ -55,5 +55,5 @@ const STOP_ID = setInterval(() => {
   Bounce_Nowloading();
   setTimeout(() => {
     Reposition_Nowloading();
-  }, 1800);
-}, 2700);
+  }, 1800); // 1.8s後にNowloadingを再配置する
+}, 2700); // 2.7sごとにアニメーションを動かす
